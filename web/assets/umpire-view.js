@@ -31,6 +31,13 @@ function render(){
   const container=document.getElementById('umpire-content');if(!container||!active)return;
   result=evaluateUmpire(active,players,settings);
   const s=result.summary;
+  const overview=document.getElementById('umpire-overview');
+  if(overview){
+    const card=(label,value,unit,note)=>`<article class="kpi"><div class="kpi-label">${label}</div><div class="kpi-value">${value} <small>${unit}</small></div><p>${note}</p></article>`;
+    const ready=!metadata.loading,impact=result.impact;
+    overview.innerHTML=card('疑似誤判率',ready?pct(s.clear?impact.total/s.clear:null):'—','',ready?`${impact.total} / ${s.clear} 顆可評估非邊界判決 · 排除邊界球`:'正在取得身高資料…')+
+      ['home','away'].map(side=>{const team=impact.teams.find(t=>t.side===side);return card(`${side==='home'?'主場':'客場'}球隊誤判得利`,ready&&s.clear?team.benefited:'—','球',`${esc(active[side].name)} · ${ready?(s.clear?'非邊界疑似誤判受益球數':'無可評估非邊界判決'):'正在取得身高資料…'}`);}).join('');
+  }
   container.innerHTML=`<div class="umpire-intro"><div><div class="eyebrow">UMPIRE DECISION REPORT</div><h3>主審 ${esc(active.umpire)} <span>好壞球判決分析</span></h3><p>依官網身高比例框與所選幾何模型計算的相符率，並非官方 ABS 裁定。</p></div><div class="download-group"><button class="outline-button" id="umpire-json">↓ 判決 JSON</button><button class="outline-button" id="umpire-csv">↓ 判決 CSV</button></div></div>
   <div class="umpire-controls"><label>球點平面<select id="umpire-plane"><option value="middle" ${settings.plane==='middle'?'selected':''}>官網中間平面</option><option value="front" ${settings.plane==='front'?'selected':''}>原始進壘平面</option></select></label><label>假設球半徑（cm）<input id="umpire-radius" type="number" min="0" max="5" step="0.05" value="${settings.radiusCm}"></label><label>邊界不確定帶（cm）<input id="umpire-tolerance" type="number" min="0" max="10" step="0.5" value="${settings.toleranceCm}"></label><p>距球體與框接觸邊界 ±${fmt(settings.toleranceCm,1)} cm 列為不確定；不自動改算正確。半徑 0 為球心模型。</p></div>
   <div class="umpire-stats">${metric('全場模型相符率',pct(s.accuracy),`${s.matches} / ${s.eligible} 顆可評估判決（含邊界）`)}${metric('非邊界相符率',pct(s.clearAccuracy),`${s.clearMatches} / ${s.clear} 顆非邊界判決`)}${metric('邊界不確定',s.borderline,'保留於全場相符率，另列不確定')}${metric('可評估覆蓋率',pct(s.coverage),`${s.eligible} / ${s.called} 顆好壞球判決`)}</div>
