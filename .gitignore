@@ -10,3 +10,6 @@ dist/
 .env.*
 !.env.example
 *.log
+research/strike-zone/chunks/
+research/strike-zone/cpbl-game-page.html
+research/strike-zone/script-urls.json

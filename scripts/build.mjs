@@ -6,6 +6,7 @@ export async function build(){
   const dist=path.join(root,'dist');await mkdir(dist,{recursive:true});
   await cp(path.join(root,'web'),dist,{recursive:true});
   await cp(path.join(root,'lib/analysis.js'),path.join(dist,'assets/analysis.js'));
+  await cp(path.join(root,'lib/umpire.js'),path.join(dist,'assets/umpire.js'));
   await mkdir(path.join(dist,'data/games'),{recursive:true});
   await mkdir(path.join(dist,'data/snapshots'),{recursive:true});
   const games=[];

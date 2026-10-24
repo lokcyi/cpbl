@@ -1,0 +1,657 @@
+{
+  "collectedAt": "2026-10-24T12:02:24.134Z",
+  "players": {
+    "0000003649": {
+      "id": "0000003649",
+      "name": "吳念庭",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.499Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003649"
+    },
+    "0000006927": {
+      "id": "0000006927",
+      "name": "曾子祐",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.502Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006927"
+    },
+    "0000006730": {
+      "id": "0000006730",
+      "name": "張仁瑋",
+      "heightCm": 171,
+      "fetchedAt": "2026-10-24T12:02:23.502Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006730"
+    },
+    "0000000772": {
+      "id": "0000000772",
+      "name": "陳文杰",
+      "heightCm": 184,
+      "fetchedAt": "2026-10-24T12:02:23.504Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000772"
+    },
+    "0000000929": {
+      "id": "0000000929",
+      "name": "王威晨",
+      "heightCm": 185,
+      "fetchedAt": "2026-10-24T12:02:23.506Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000929"
+    },
+    "0000005571": {
+      "id": "0000005571",
+      "name": "岳政華",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.508Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005571"
+    },
+    "0000005569": {
+      "id": "0000005569",
+      "name": "曾頌恩",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.536Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005569"
+    },
+    "0000002297": {
+      "id": "0000002297",
+      "name": "詹子賢",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.544Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000002297"
+    },
+    "0000004636": {
+      "id": "0000004636",
+      "name": "江坤宇",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.550Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000004636"
+    },
+    "0000007085": {
+      "id": "0000007085",
+      "name": "張士綸",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.551Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007085"
+    },
+    "0000002285": {
+      "id": "0000002285",
+      "name": "高宇杰",
+      "heightCm": 184,
+      "fetchedAt": "2026-10-24T12:02:23.556Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000002285"
+    },
+    "0000005298": {
+      "id": "0000005298",
+      "name": "黃韋盛",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.561Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005298"
+    },
+    "0000007239": {
+      "id": "0000007239",
+      "name": "魔鷹",
+      "heightCm": 201,
+      "fetchedAt": "2026-10-24T12:02:23.566Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007239"
+    },
+    "0000000935": {
+      "id": "0000000935",
+      "name": "王柏融",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.579Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000935"
+    },
+    "0000007302": {
+      "id": "0000007302",
+      "name": "宋柏翰",
+      "heightCm": 190,
+      "fetchedAt": "2026-10-24T12:02:23.583Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007302"
+    },
+    "0000005340": {
+      "id": "0000005340",
+      "name": "王博玄",
+      "heightCm": 184,
+      "fetchedAt": "2026-10-24T12:02:23.583Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005340"
+    },
+    "0000007301": {
+      "id": "0000007301",
+      "name": "曾昱磬",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.589Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007301"
+    },
+    "0000001258": {
+      "id": "0000001258",
+      "name": "劉時豪",
+      "heightCm": 165,
+      "fetchedAt": "2026-10-24T12:02:23.601Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001258"
+    },
+    "0000006926": {
+      "id": "0000006926",
+      "name": "陳致嘉",
+      "heightCm": 177,
+      "fetchedAt": "2026-10-24T12:02:23.602Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006926"
+    },
+    "0000006225": {
+      "id": "0000006225",
+      "name": "宋晟睿",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.611Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006225"
+    },
+    "0000001291": {
+      "id": "0000001291",
+      "name": "郭阜林",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.620Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001291"
+    },
+    "0000006931": {
+      "id": "0000006931",
+      "name": "黃劼希",
+      "heightCm": 177,
+      "fetchedAt": "2026-10-24T12:02:23.621Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006931"
+    },
+    "0000003609": {
+      "id": "0000003609",
+      "name": "陳俊秀",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.622Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003609"
+    },
+    "0000005549": {
+      "id": "0000005549",
+      "name": "郭天信",
+      "heightCm": 173,
+      "fetchedAt": "2026-10-24T12:02:23.641Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005549"
+    },
+    "0000005540": {
+      "id": "0000005540",
+      "name": "李凱威",
+      "heightCm": 174,
+      "fetchedAt": "2026-10-24T12:02:23.651Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005540"
+    },
+    "0000001318": {
+      "id": "0000001318",
+      "name": "朱育賢",
+      "heightCm": 188,
+      "fetchedAt": "2026-10-24T12:02:23.651Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001318"
+    },
+    "0000005545": {
+      "id": "0000005545",
+      "name": "劉基鴻",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.655Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005545"
+    },
+    "0000005542": {
+      "id": "0000005542",
+      "name": "張政禹",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.660Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005542"
+    },
+    "0000000743": {
+      "id": "0000000743",
+      "name": "陳子豪",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.671Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000743"
+    },
+    "0000007079": {
+      "id": "0000007079",
+      "name": "劉俊緯",
+      "heightCm": 176,
+      "fetchedAt": "2026-10-24T12:02:23.677Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007079"
+    },
+    "0000007278": {
+      "id": "0000007278",
+      "name": "許庭綸",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.712Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007278"
+    },
+    "0000006217": {
+      "id": "0000006217",
+      "name": "林辰勳",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.712Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006217"
+    },
+    "0000007284": {
+      "id": "0000007284",
+      "name": "徐紹予",
+      "heightCm": 184,
+      "fetchedAt": "2026-10-24T12:02:23.717Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007284"
+    },
+    "0000007621": {
+      "id": "0000007621",
+      "name": "蔡琞傑",
+      "heightCm": 179,
+      "fetchedAt": "2026-10-24T12:02:23.721Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007621"
+    },
+    "0000006216": {
+      "id": "0000006216",
+      "name": "王順和",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.727Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006216"
+    },
+    "0000006221": {
+      "id": "0000006221",
+      "name": "劉貴元",
+      "heightCm": 177,
+      "fetchedAt": "2026-10-24T12:02:23.738Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006221"
+    },
+    "0000003183": {
+      "id": "0000003183",
+      "name": "張志豪",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.743Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003183"
+    },
+    "0000007610": {
+      "id": "0000007610",
+      "name": "吳承皓",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.753Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007610"
+    },
+    "0000007308": {
+      "id": "0000007308",
+      "name": "許博閎",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.753Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007308"
+    },
+    "0000006726": {
+      "id": "0000006726",
+      "name": "李展毅",
+      "heightCm": 188,
+      "fetchedAt": "2026-10-24T12:02:23.764Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006726"
+    },
+    "0000005553": {
+      "id": "0000005553",
+      "name": "張祐銘",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.765Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005553"
+    },
+    "0000006734": {
+      "id": "0000006734",
+      "name": "黃鈞麟",
+      "heightCm": 176,
+      "fetchedAt": "2026-10-24T12:02:23.777Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006734"
+    },
+    "0000006731": {
+      "id": "0000006731",
+      "name": "周委宏",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.780Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006731"
+    },
+    "0000007282": {
+      "id": "0000007282",
+      "name": "陳九登",
+      "heightCm": 173,
+      "fetchedAt": "2026-10-24T12:02:23.783Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007282"
+    },
+    "0000005548": {
+      "id": "0000005548",
+      "name": "林孝程",
+      "heightCm": 172,
+      "fetchedAt": "2026-10-24T12:02:23.796Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005548"
+    },
+    "0000007587": {
+      "id": "0000007587",
+      "name": "*潘信安",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.797Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007587"
+    },
+    "0000007306": {
+      "id": "0000007306",
+      "name": "黃贊維",
+      "heightCm": 177,
+      "fetchedAt": "2026-10-24T12:02:23.800Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007306"
+    },
+    "0000007310": {
+      "id": "0000007310",
+      "name": "許子謙",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.810Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007310"
+    },
+    "0000005567": {
+      "id": "0000005567",
+      "name": "林瑞鈞",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.812Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005567"
+    },
+    "0000007086": {
+      "id": "0000007086",
+      "name": "楊祥禾",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.819Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007086"
+    },
+    "0000005538": {
+      "id": "0000005538",
+      "name": "黃柏豪",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.828Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005538"
+    },
+    "0000007608": {
+      "id": "0000007608",
+      "name": "*傅鈞致",
+      "heightCm": 190,
+      "fetchedAt": "2026-10-24T12:02:23.835Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007608"
+    },
+    "0000000356": {
+      "id": "0000000356",
+      "name": "石翔宇",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.835Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000356"
+    },
+    "0000005532": {
+      "id": "0000005532",
+      "name": "全浩瑋",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.841Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005532"
+    },
+    "0000002286": {
+      "id": "0000002286",
+      "name": "林立",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.846Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000002286"
+    },
+    "0000006963": {
+      "id": "0000006963",
+      "name": "◎盧彥祖",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.851Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006963"
+    },
+    "0000004633": {
+      "id": "0000004633",
+      "name": "陳晨威",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.858Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000004633"
+    },
+    "0000007806": {
+      "id": "0000007806",
+      "name": "道威聖",
+      "heightCm": 188,
+      "fetchedAt": "2026-10-24T12:02:23.867Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007806"
+    },
+    "0000003467": {
+      "id": "0000003467",
+      "name": "林泓育",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.872Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003467"
+    },
+    "0000003625": {
+      "id": "0000003625",
+      "name": "吉力吉撈．鞏冠",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.880Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003625"
+    },
+    "0000001618": {
+      "id": "0000001618",
+      "name": "林子偉",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:23.909Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001618"
+    },
+    "0000005291": {
+      "id": "0000005291",
+      "name": "蔣少宏",
+      "heightCm": 179,
+      "fetchedAt": "2026-10-24T12:02:23.912Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005291"
+    },
+    "0000006879": {
+      "id": "0000006879",
+      "name": "冉皓燐",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.914Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006879"
+    },
+    "0000000132": {
+      "id": "0000000132",
+      "name": "梁家榮",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.916Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000132"
+    },
+    "0000007076": {
+      "id": "0000007076",
+      "name": "李勛傑",
+      "heightCm": 187,
+      "fetchedAt": "2026-10-24T12:02:23.920Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007076"
+    },
+    "0000006854": {
+      "id": "0000006854",
+      "name": "宋嘉翔",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:23.922Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006854"
+    },
+    "0000006235": {
+      "id": "0000006235",
+      "name": "林政華",
+      "heightCm": 173,
+      "fetchedAt": "2026-10-24T12:02:23.945Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006235"
+    },
+    "0000006240": {
+      "id": "0000006240",
+      "name": "馬傑森",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:23.947Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006240"
+    },
+    "0000007291": {
+      "id": "0000007291",
+      "name": "全紹凱",
+      "heightCm": 171,
+      "fetchedAt": "2026-10-24T12:02:23.948Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007291"
+    },
+    "0000007036": {
+      "id": "0000007036",
+      "name": "戴伯丞",
+      "heightCm": 173,
+      "fetchedAt": "2026-10-24T12:02:23.948Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007036"
+    },
+    "0000007009": {
+      "id": "0000007009",
+      "name": "陳維祥",
+      "heightCm": 185,
+      "fetchedAt": "2026-10-24T12:02:23.955Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007009"
+    },
+    "0000006843": {
+      "id": "0000006843",
+      "name": "潘磊",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.955Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006843"
+    },
+    "0000002289": {
+      "id": "0000002289",
+      "name": "陳重廷",
+      "heightCm": 181,
+      "fetchedAt": "2026-10-24T12:02:23.978Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000002289"
+    },
+    "0000007091": {
+      "id": "0000007091",
+      "name": "高捷",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.978Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007091"
+    },
+    "0000007070": {
+      "id": "0000007070",
+      "name": "林佳緯",
+      "heightCm": 182,
+      "fetchedAt": "2026-10-24T12:02:23.979Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007070"
+    },
+    "0000001473": {
+      "id": "0000001473",
+      "name": "李宗賢",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.990Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001473"
+    },
+    "0000005496": {
+      "id": "0000005496",
+      "name": "辛元旭",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.991Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000005496"
+    },
+    "0000000361": {
+      "id": "0000000361",
+      "name": "張洺瑀",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:23.997Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000000361"
+    },
+    "0000006861": {
+      "id": "0000006861",
+      "name": "#蔡佳諺",
+      "heightCm": 183,
+      "fetchedAt": "2026-10-24T12:02:24.010Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006861"
+    },
+    "0000002305": {
+      "id": "0000002305",
+      "name": "王正棠",
+      "heightCm": 177,
+      "fetchedAt": "2026-10-24T12:02:24.022Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000002305"
+    },
+    "0000004642": {
+      "id": "0000004642",
+      "name": "林靖凱",
+      "heightCm": 170,
+      "fetchedAt": "2026-10-24T12:02:24.024Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000004642"
+    },
+    "0000003645": {
+      "id": "0000003645",
+      "name": "柯育民",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:24.026Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000003645"
+    },
+    "0000001339": {
+      "id": "0000001339",
+      "name": "林祖傑",
+      "heightCm": 176,
+      "fetchedAt": "2026-10-24T12:02:24.027Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000001339"
+    },
+    "0000004622": {
+      "id": "0000004622",
+      "name": "蕭憶銘",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:24.028Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000004622"
+    },
+    "0000006743": {
+      "id": "0000006743",
+      "name": "劉俊豪",
+      "heightCm": 179,
+      "fetchedAt": "2026-10-24T12:02:24.050Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006743"
+    },
+    "0000006810": {
+      "id": "0000006810",
+      "name": "潘瑋祥",
+      "heightCm": 188,
+      "fetchedAt": "2026-10-24T12:02:24.055Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006810"
+    },
+    "0000007298": {
+      "id": "0000007298",
+      "name": "盧柏華",
+      "heightCm": 180,
+      "fetchedAt": "2026-10-24T12:02:24.057Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007298"
+    },
+    "0000007297": {
+      "id": "0000007297",
+      "name": "楊泯貽",
+      "heightCm": 175,
+      "fetchedAt": "2026-10-24T12:02:24.059Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007297"
+    },
+    "0000006868": {
+      "id": "0000006868",
+      "name": "周佳樂",
+      "heightCm": 172,
+      "fetchedAt": "2026-10-24T12:02:24.060Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006868"
+    },
+    "0000006220": {
+      "id": "0000006220",
+      "name": "*馬鋼",
+      "heightCm": 185,
+      "fetchedAt": "2026-10-24T12:02:24.077Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006220"
+    },
+    "0000006213": {
+      "id": "0000006213",
+      "name": "何恆佑",
+      "heightCm": 185,
+      "fetchedAt": "2026-10-24T12:02:24.108Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000006213"
+    },
+    "0000007304": {
+      "id": "0000007304",
+      "name": "曾聖安",
+      "heightCm": 178,
+      "fetchedAt": "2026-10-24T12:02:24.116Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000007304"
+    },
+    "0000004627": {
+      "id": "0000004627",
+      "name": "張偉聖",
+      "heightCm": 168,
+      "fetchedAt": "2026-10-24T12:02:24.134Z",
+      "source": "https://stats.cpbl.com.tw/api/proxy/v1/players/0000004627"
+    }
+  },
+  "errors": []
+}

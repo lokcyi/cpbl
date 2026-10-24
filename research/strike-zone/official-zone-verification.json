@@ -1,0 +1,190 @@
+{
+  "source": "https://stats.cpbl.com.tw/schedule/2026-C-4",
+  "verifiedAt": "2026-10-24",
+  "player": {
+    "id": "0000005569",
+    "name": "曾頌恩",
+    "heightCm": 178
+  },
+  "zone": {
+    "bottomM": 0.4806,
+    "topM": 0.9523,
+    "halfWidthM": 0.2158,
+    "widthM": 0.4316,
+    "missingHeightDefaultM": 1.803
+  },
+  "svg": {
+    "width": 384,
+    "height": 512,
+    "xRange": [
+      -0.55,
+      0.55
+    ],
+    "heightRange": [
+      0.15,
+      1.55
+    ]
+  },
+  "pitches": [
+    {
+      "pitch": 1,
+      "content": "壞球。",
+      "called": "BallCalled",
+      "taggedType": "breakingball",
+      "raw": {
+        "side": 0.111194088,
+        "height": -0.008058912000000001
+      },
+      "displayPlane": {
+        "side": 0.11493339320794929,
+        "height": -0.04453294761008689
+      },
+      "svg": {
+        "x": 151.87779728013408,
+        "y": 583.1434779831176
+      },
+      "frontTime": 0.5030771166056129,
+      "middleTime": 0.5101390100248976
+    },
+    {
+      "pitch": 2,
+      "content": "壞球。",
+      "called": "BallCalled",
+      "taggedType": "fastball",
+      "raw": {
+        "side": -0.485046528,
+        "height": 1.196260752
+      },
+      "displayPlane": {
+        "side": -0.4889956416712462,
+        "height": 1.1795869668495358
+      },
+      "svg": {
+        "x": 362.7039330925077,
+        "y": 135.46533783788408
+      },
+      "frontTime": 0.43289983648168784,
+      "middleTime": 0.43896544945203625
+    },
+    {
+      "pitch": 3,
+      "content": "好球沒揮棒。",
+      "called": "StrikeCalled",
+      "taggedType": "breakingball",
+      "raw": {
+        "side": -0.176268888,
+        "height": 0.663135072
+      },
+      "displayPlane": {
+        "side": -0.17697989149303983,
+        "height": 0.6276630208801772
+      },
+      "svg": {
+        "x": 253.78207121211574,
+        "y": 337.31180950667806
+      },
+      "frontTime": 0.4875057542037946,
+      "middleTime": 0.4942704598911741
+    },
+    {
+      "pitch": 4,
+      "content": "壞球。",
+      "called": "BallCalled",
+      "taggedType": "breakingball",
+      "raw": {
+        "side": -0.439945272,
+        "height": 1.057424352
+      },
+      "displayPlane": {
+        "side": -0.45054483490797326,
+        "height": 1.0308485858888188
+      },
+      "svg": {
+        "x": 349.2811060042379,
+        "y": 189.86108858923203
+      },
+      "frontTime": 0.4896377741486821,
+      "middleTime": 0.49646378626262716
+    },
+    {
+      "pitch": 5,
+      "content": "揮棒落空。",
+      "called": "StrikeSwinging",
+      "taggedType": "fastball",
+      "raw": {
+        "side": 0.032196024,
+        "height": 0.9795144240000001
+      },
+      "displayPlane": {
+        "side": 0.03479069811836205,
+        "height": 0.959390621521858
+      },
+      "svg": {
+        "x": 179.8548835659536,
+        "y": 215.99428698629197
+      },
+      "frontTime": 0.43208506154820164,
+      "middleTime": 0.43811390928522426
+    },
+    {
+      "pitch": 6,
+      "content": "擊出界外球。",
+      "called": "FoulBallNotFieldable",
+      "taggedType": "fastball",
+      "raw": {
+        "side": 0.126988824,
+        "height": 1.053172392
+      },
+      "displayPlane": {
+        "side": 0.13109494360002621,
+        "height": 1.0347964822248878
+      },
+      "svg": {
+        "x": 146.2359469614454,
+        "y": 188.41728650061248
+      },
+      "frontTime": 0.4334276189559455,
+      "middleTime": 0.43947119637460536
+    },
+    {
+      "pitch": 7,
+      "content": "擊出界外球。",
+      "called": "FoulBallNotFieldable",
+      "taggedType": "fastball",
+      "raw": {
+        "side": 0.360572304,
+        "height": 1.023222744
+      },
+      "displayPlane": {
+        "side": 0.36758056174768566,
+        "height": 1.0044245291348928
+      },
+      "svg": {
+        "x": 63.68096753535338,
+        "y": 199.5247436306678
+      },
+      "frontTime": 0.4305998460691405,
+      "middleTime": 0.4366372634316174
+    },
+    {
+      "pitch": 8,
+      "content": "壞球。四壞球上壘。",
+      "called": "BallCalled",
+      "taggedType": "fastball",
+      "raw": {
+        "side": 0.141347952,
+        "height": 1.383414048
+      },
+      "displayPlane": {
+        "side": 0.14531007609882496,
+        "height": 1.3694567998289933
+      },
+      "svg": {
+        "x": 141.273573434592,
+        "y": 66.02722749111105
+      },
+      "frontTime": 0.42970118468413315,
+      "middleTime": 0.43572709435289453
+    }
+  ]
+}

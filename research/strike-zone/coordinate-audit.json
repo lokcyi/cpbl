@@ -1,0 +1,176 @@
+{
+  "auditDate": "2026-10-24",
+  "basis": "Archived official JSON; not a new live fetch",
+  "hypothesis": "P(t) = c0+c1*t+c2*t^2, height ~ Y(t), side ~ -Z(t). Speed assumes positional units metres and time seconds; units and plate-plane origin need authoritative confirmation.",
+  "warning": "Residuals compare fields produced by the same upstream tracking pipeline. They do not establish physical sensor accuracy or an official ABS zone.",
+  "games": [
+    {
+      "id": "2026-A-211",
+      "count": 326,
+      "longitudinalAtZoneTime": {
+        "count": 326,
+        "min": 0.4306088069251417,
+        "max": 0.4382602837146252,
+        "median": 0.4335061120338998,
+        "rmse": 0.43364107611896835,
+        "maxAbsolute": 0.4382602837146252
+      },
+      "heightResidual": {
+        "count": 326,
+        "min": -0.00499952317745192,
+        "max": 0.0016958571493417285,
+        "median": -0.00022757609884793695,
+        "rmse": 0.0013912630720086289,
+        "maxAbsolute": 0.00499952317745192
+      },
+      "sideResidual": {
+        "count": 326,
+        "min": -0.0028925780318729832,
+        "max": 0.0038443992216724565,
+        "median": -0.00001972675383615785,
+        "rmse": 0.0009640724389060405,
+        "maxAbsolute": 0.0038443992216724565
+      },
+      "speedResidual": {
+        "count": 326,
+        "min": -0.43214007825153544,
+        "max": -0.02216510154636353,
+        "median": -0.21302938776982216,
+        "rmse": 0.22549729943825053,
+        "maxAbsolute": 0.43214007825153544
+      },
+      "example": {
+        "event": "0110001000",
+        "pitcher": "德保拉",
+        "batter": "陳文杰",
+        "time": 0.444116,
+        "position": {
+          "X": 0.433843661914207,
+          "Y": 0.6021639226684272,
+          "Z": -0.11403446139999918
+        },
+        "reportedLocation": {
+          "ZoneTime": 0.444116,
+          "ZoneSpeed": 126.20879593344,
+          "PlateLocSide": 0.114763296,
+          "PlateLocHeight": 0.6015654720000001
+        },
+        "heightResidual": 0.0005984506684271196,
+        "sideResidual": 0.0007288346000008245,
+        "speedResidual": -0.2955634277940504
+      }
+    },
+    {
+      "id": "2026-D-166",
+      "count": 257,
+      "longitudinalAtZoneTime": {
+        "count": 257,
+        "min": 0.4319959462787888,
+        "max": 0.43668418859191693,
+        "median": 0.4334209198447465,
+        "rmse": 0.4335358980064245,
+        "maxAbsolute": 0.43668418859191693
+      },
+      "heightResidual": {
+        "count": 257,
+        "min": -0.006990470451146633,
+        "max": 0.0013693811927334432,
+        "median": -0.00025428566235774497,
+        "rmse": 0.0014891324575106563,
+        "maxAbsolute": 0.006990470451146633
+      },
+      "sideResidual": {
+        "count": 257,
+        "min": -0.003543268441436931,
+        "max": 0.002146098674561142,
+        "median": -0.0005685055069701572,
+        "rmse": 0.0011299568710576818,
+        "maxAbsolute": 0.003543268441436931
+      },
+      "speedResidual": {
+        "count": 257,
+        "min": -0.3771935053022446,
+        "max": 0.014996179881720195,
+        "median": -0.19805340389720527,
+        "rmse": 0.1980923808048146,
+        "maxAbsolute": 0.3771935053022446
+      },
+      "example": {
+        "event": "0110001000",
+        "pitcher": "曾仁和",
+        "batter": "劉貴元",
+        "time": 0.448213,
+        "position": {
+          "X": 0.43357917046647976,
+          "Y": 0.3366284791072959,
+          "Z": -0.35727513997376137
+        },
+        "reportedLocation": {
+          "ZoneTime": 0.448213,
+          "ZoneSpeed": 127.14253732224,
+          "PlateLocSide": 0.355805232,
+          "PlateLocHeight": 0.3365723520000001
+        },
+        "heightResidual": 0.00005612710729580028,
+        "sideResidual": -0.0014699079737613419,
+        "speedResidual": -0.22479313749282426
+      }
+    },
+    {
+      "id": "2026-C-1",
+      "count": 218,
+      "longitudinalAtZoneTime": {
+        "count": 218,
+        "min": 0.4315412120288159,
+        "max": 0.4372946523472898,
+        "median": 0.43339483753081304,
+        "rmse": 0.4336310293427826,
+        "maxAbsolute": 0.4372946523472898
+      },
+      "heightResidual": {
+        "count": 218,
+        "min": -0.005056040096432346,
+        "max": 0.0015848372292890378,
+        "median": -0.0003635687312171787,
+        "rmse": 0.0012653148470193887,
+        "maxAbsolute": 0.005056040096432346
+      },
+      "sideResidual": {
+        "count": 218,
+        "min": -0.003862793372685816,
+        "max": 0.002100817077163905,
+        "median": -0.0007438745009483716,
+        "rmse": 0.0013440712628540476,
+        "maxAbsolute": 0.003862793372685816
+      },
+      "speedResidual": {
+        "count": 218,
+        "min": -0.423238709123936,
+        "max": -0.02382423527132005,
+        "median": -0.23106389457904442,
+        "rmse": 0.24380500943312808,
+        "maxAbsolute": 0.423238709123936
+      },
+      "example": {
+        "event": "0110001000",
+        "pitcher": "蔣銲",
+        "batter": "張士綸",
+        "time": 0.4229,
+        "position": {
+          "X": 0.43281804179576666,
+          "Y": 0.8787534706511997,
+          "Z": -0.34737079103241064
+        },
+        "reportedLocation": {
+          "ZoneTime": 0.4229,
+          "ZoneSpeed": 132.09788452608,
+          "PlateLocSide": 0.34666428,
+          "PlateLocHeight": 0.878467128
+        },
+        "heightResidual": 0.00028634265119964475,
+        "sideResidual": -0.0007065110324106505,
+        "speedResidual": -0.2971736090849788
+      }
+    }
+  ]
+}
