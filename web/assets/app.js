@@ -22,8 +22,15 @@ async function getJson(url){
 function gameCards(){
   const k=$('#kind').value;
   const list=games.filter(g=>k==='all'||g.KindCode===k);
+  const conflict=list.some((g,i)=>list.some((other,j)=>i!==j&&g.GameId!==other.GameId&&g.PreExeDate===other.PreExeDate&&g.Field?.No===other.Field?.No&&g.Visiting.Team.Code===other.Visiting.Team.Code&&g.Home.Team.Code===other.Home.Team.Code));
   $('#games').innerHTML=list.length?list.map(g=>`<button class="game-card ${current?.id===g.GameId?'selected':''}" data-game="${esc(g.GameId)}" aria-pressed="${current?.id===g.GameId}"><span class="game-meta"><span>${esc(String(g.PreExeDate??'').slice(0,16).replace('T',' '))}</span><span>${esc(kinds[g.KindCode]??g.KindCode)}</span><span>${esc(g.Field?.Abbe)}</span></span><strong><span>${esc(g.Visiting.Team.Name)}</span><b>${fmt(g.Visiting.Score)}</b></strong><strong><span>${esc(g.Home.Team.Name)}</span><b>${fmt(g.Home.Score)}</b></strong></button>`).join(''):'<div class="empty">此日期與賽事類別沒有可顯示的比賽。<br>可以更換日期，或查看已驗證場次。</div>';
-  $('#games').querySelectorAll('[data-game]').forEach(b=>b.addEventListener('click',()=>loadGame(b.dataset.game,sampleMode)));
+  $('#games').querySelectorAll('[data-game]').forEach(b=>{
+    const g=list.find(g=>g.GameId===b.dataset.game),playable=['FINISHED','PLAYING'].includes(g.GameStatus);
+    b.querySelector('.game-meta').insertAdjacentHTML('beforeend',`<span class="badge">${esc(g.GameId)} · ${esc(statusLabel(g.GameStatus))}</span>`);
+    if(!playable){b.querySelectorAll('b').forEach(score=>score.textContent='—');b.setAttribute('aria-disabled','true');}
+    b.addEventListener('click',()=>{if(!playable){notice(`${g.GameId}：${statusLabel(g.GameStatus)}，尚無可分析的比賽資料。賽程異動請以聯盟最新公告為準。`);return;}loadGame(b.dataset.game,sampleMode);});
+  });
+  if(conflict)$('#games').insertAdjacentHTML('afterbegin','<div class="notice schedule-warning" role="status">官方資料將不同場次列於同時間、同場地與同對戰組合，可能尚未同步延賽後排程；下列為原始賽程紀錄，不代表當日會進行兩場。請以聯盟最新公告為準。</div>');
 }
 function showSamples(){scheduleRequest++;sampleMode=true;games=samples;$('#schedule-status').textContent=`已驗證資料快照 · ${samples.length} 場比賽 · 保存日期 2026-10-24`;gameCards();}
 async function showRecent(){
@@ -45,7 +52,7 @@ $('#schedule-form').addEventListener('submit',async e=>{
     }
     if(request!==scheduleRequest)return;
     sampleMode=false;games=response.raw.Data.Games;
-    $('#schedule-status').textContent=`${date} · ${games.length} 場比賽 · ${response.source==='saved'?'批次收錄賽程':'官方賽程'}`;
+    $('#schedule-status').textContent=`${date} · ${games.length} 筆賽程紀錄 · ${response.source==='saved'?'批次收錄賽程':'官方賽程'}`;
     gameCards();
   }catch(error){
     if(request!==scheduleRequest)return;

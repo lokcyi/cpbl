@@ -14,3 +14,5 @@
 @media(min-width:701px){.brand{font-size:16px;gap:8px}.brand-icon{font-size:38px}}
 
 .umpire-overview{grid-template-columns:repeat(3,minmax(0,1fr))}.umpire-overview .kpi-label,.umpire-overview p{font-size:11px;color:var(--muted)}.umpire-overview .kpi-value small{font-size:13px;font-weight:400}@media(max-width:700px){.umpire-overview{grid-template-columns:1fr}}
+
+.schedule-warning{grid-column:1/-1}.game-card[aria-disabled=true]{cursor:default;background:#fafbf8}.game-card .game-meta{flex-wrap:wrap}
