@@ -1,12 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {analyze} from '../lib/analysis.js';
+import {analyze,normalizePitches} from '../lib/analysis.js';
 import {officialZone,displayPoint,rectangleDistance,calledDecision,evaluateUmpire,umpireCsv} from '../lib/umpire.js';
 import {collectPlayers,profileFromResponse} from '../lib/players.js';
 const point=(x,z,call='StrikeCalled',content='')=>({index:1,batterId:'0000005569',batter:'曾頌恩',pitcher:'投手',inning:1,half:'上',battingSide:'away',atBatKey:'1:1:1:0000005569',x,z,located:true,call,content});
 const game=pitches=>({id:'2026-C-4',umpire:'測試主審',pitches});
 const profiles={'0000005569':{heightCm:180,fetchedAt:'2026-10-24',source:'official'}};
+
+test('called pitch context reverses post-call counts but preserves pre-play outs, including walks and strikeouts',()=>{
+  const row=(b,s,o,isB,isS,text)=>({BallCnt:b,StrikeCnt:s,OutCnt:o,IsBall:isB,IsStrike:isS,IsSpecialEvent:'0',Content:text});
+  const ps=normalizePitches({LiveLog:[row(1,0,1,'1','0','壞球。'),row(4,2,2,'1','0','壞球。四壞球上壘。'),row(2,3,1,'0','1','好球沒揮棒。三振。'),row(null,null,null,'1','0','壞球。')]});
+  assert.deepEqual(ps.map(p=>[p.ballsBefore,p.strikesBefore,p.outsBefore]),[[0,0,1],[3,2,2],[2,2,1],[null,null,null]]);
+});
 test('official height frame matches Tseng at 178 cm; missing height does not silently use default',()=>{
   const z=officialZone(178);assert.equal(z.bottom,.4806);assert.equal(z.top,.9523);assert.equal(z.right-z.left,.4316);
   for(const h of [undefined,null,'',0,-1,999])assert.equal(officialZone(h),null);
