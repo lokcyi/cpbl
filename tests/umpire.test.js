@@ -67,3 +67,15 @@ test('rejects unsafe analysis settings',()=>{
   assert.throws(()=>evaluateUmpire(game([]),{}, {radiusCm:-1}),/settings/);
   assert.throws(()=>evaluateUmpire(game([]),{}, {plane:'unknown'}),/settings/);
 });
+
+test('team impact attributes both innings and call directions, excludes uncertain calls and balances totals',()=>{
+  const pitches=[point(0,.7,'BallCalled'),point(.5,.7),{...point(0,.7,'BallCalled'),battingSide:'home'},{...point(.5,.7),battingSide:'home'},point(.5,.7),point(.2523,.7,'BallCalled'),point(0,.7),{...point(.5,.7),battingSide:'unknown'}];
+  const r=evaluateUmpire({...game(pitches),away:{name:'客隊'},home:{name:'主隊'}},profiles,{plane:'front'});
+  assert.deepEqual(r.rows.slice(0,4).map(p=>p.benefitingSide),['away','home','home','away']);
+  assert.equal(r.rows[0].benefitingTeam,'客隊');assert.equal(r.rows[0].harmedTeam,'主隊');
+  assert.equal(r.rows[5].benefitingSide,null);assert.equal(r.rows[6].benefitingSide,null);
+  assert.equal(r.impact.total,6);assert.equal(r.impact.unattributed,1);
+  assert.deepEqual(r.impact.teams.map(t=>[t.benefited,t.harmed,t.net,t.battingBenefits,t.fieldingBenefits]),[[2,3,-1,1,1],[3,2,1,1,2]]);
+  assert.equal(r.impact.teams.reduce((sum,t)=>sum+t.net,0),0);
+  assert.ok(umpireCsv(r).includes('"benefitingTeam"'));
+});
