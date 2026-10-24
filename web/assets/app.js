@@ -22,10 +22,15 @@ async function getJson(url){
 function gameCards(){
   const k=$('#kind').value;
   const list=games.filter(g=>k==='all'||g.KindCode===k);
-  $('#games').innerHTML=list.length?list.map(g=>`<button class="game-card ${current?.id===g.GameId?'selected':''}" data-game="${esc(g.GameId)}" aria-pressed="${current?.id===g.GameId}"><span class="game-meta"><span>${esc(String(g.PreExeDate??'').slice(0,10))}</span><span>${esc(kinds[g.KindCode]??g.KindCode)}</span><span>${esc(g.Field?.Abbe)}</span></span><strong><span>${esc(g.Visiting.Team.Name)}</span><b>${fmt(g.Visiting.Score)}</b></strong><strong><span>${esc(g.Home.Team.Name)}</span><b>${fmt(g.Home.Score)}</b></strong></button>`).join(''):'<div class="empty">此日期與賽事類別沒有可顯示的比賽。<br>可以更換日期，或查看已驗證場次。</div>';
+  $('#games').innerHTML=list.length?list.map(g=>`<button class="game-card ${current?.id===g.GameId?'selected':''}" data-game="${esc(g.GameId)}" aria-pressed="${current?.id===g.GameId}"><span class="game-meta"><span>${esc(String(g.PreExeDate??'').slice(0,16).replace('T',' '))}</span><span>${esc(kinds[g.KindCode]??g.KindCode)}</span><span>${esc(g.Field?.Abbe)}</span></span><strong><span>${esc(g.Visiting.Team.Name)}</span><b>${fmt(g.Visiting.Score)}</b></strong><strong><span>${esc(g.Home.Team.Name)}</span><b>${fmt(g.Home.Score)}</b></strong></button>`).join(''):'<div class="empty">此日期與賽事類別沒有可顯示的比賽。<br>可以更換日期，或查看已驗證場次。</div>';
   $('#games').querySelectorAll('[data-game]').forEach(b=>b.addEventListener('click',()=>loadGame(b.dataset.game,sampleMode)));
 }
 function showSamples(){scheduleRequest++;sampleMode=true;games=samples;$('#schedule-status').textContent=`已驗證資料快照 · ${samples.length} 場比賽 · 保存日期 2026-10-24`;gameCards();}
+async function showRecent(){
+  const request=++scheduleRequest;$('#schedule-status').textContent='正在取得最近六場比賽…';
+  try{const data=await getJson('/api/recent');if(request!==scheduleRequest)return;sampleMode=false;games=data.games;$('#schedule-status').textContent=`最近 ${games.length} 場比賽 · 比賽時間由近到遠${data.errors.length?' · 部分日期未取得，清單可能不完整':''}${games.length<6?' · 近 30 日可用場次':''}`;gameCards();}
+  catch{if(request!==scheduleRequest)return;showSamples();$('#schedule-status').textContent='近期賽程暫時無法取得，改列已驗證資料快照。';}
+}
 $('#samples-button').addEventListener('click',showSamples);
 $('#kind').addEventListener('change',gameCards);
 $('#schedule-form').addEventListener('submit',async e=>{
@@ -151,7 +156,8 @@ $('#method-button').addEventListener('click',()=>$('#method-dialog').showModal()
 $('#close-dialog').addEventListener('click',()=>$('#method-dialog').close());
 $('#method-dialog').addEventListener('click',e=>{if(e.target===$('#method-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 try{
-  const data=await getJson('/data/samples.json');samples=data.games;showSamples();
+  const data=await getJson('/data/samples.json');samples=data.games;await showRecent();
   const url=new URL(location.href),id=url.searchParams.get('game');
-  await loadGame(id&&/^20\d{2}-[A-Z]-[1-9]\d{0,4}$/.test(id)?id:'2026-C-1',id?url.searchParams.get('source')==='snapshot':true);
+  const chosen=id&&/^20\d{2}-[A-Z]-[1-9]\d{0,4}$/.test(id)?id:games[0]?.GameId;
+  if(chosen)await loadGame(chosen,id?url.searchParams.get('source')==='snapshot':sampleMode);
 }catch(error){$('#schedule-status').textContent='樣本未能載入，可用日期查詢官方場次。';notice(error.message);}

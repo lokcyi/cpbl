@@ -1,6 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {validDate,validGame,upstream,handleApi} from '../lib/upstream.js';
+import {recentGames} from '../lib/recent.js';
+
+test('recent games sorts actual past start times, deduplicates and limits to six',async()=>{
+  const games=Array.from({length:8},(_,i)=>({GameId:'2026-A-'+(i+1),PreExeDate:`2026-10-${String(23-i).padStart(2,'0')}T18:35:00`,GameStatus:'FINISHED'}));
+  const request=async()=>({raw:{Data:{Games:[...games,...games,{GameId:'future',PreExeDate:'2026-10-24T18:35:00',GameStatus:'SCHEDULED'},{GameId:'rain',PreExeDate:'2026-10-23T19:00:00',GameStatus:'POSTPONED'}]}}});
+  const result=await recentGames({now:new Date('2026-10-24T04:00:00Z'),request});
+  assert.deepEqual(result.games.map(g=>g.GameId),games.slice(0,6).map(g=>g.GameId));assert.equal(result.errors.length,0);
+});
 test('validates calendar dates and fixed-format game identifiers',()=>{
   assert.equal(validDate('2026-07-21'),true);assert.equal(validDate('2026-02-30'),false);assert.equal(validDate('../secret'),false);
   assert.equal(validGame('2026-C-1'),true);assert.equal(validGame('https://example.com'),false);assert.equal(validGame('2026-A-0'),false);
