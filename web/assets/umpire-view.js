@@ -4,7 +4,7 @@ const fmt=(v,d=0)=>v===null||v===undefined?'—':Number(v).toFixed(d);
 const pct=v=>v===null?'—':fmt(v*100,1)+'%';
 const reasons={missing_height:'缺打者身高',missing_location:'缺球點',missing_trajectory:'缺軌跡／時間',invalid_trajectory:'無法換算平面',conflicting_call:'判決來源衝突',not_called:'非主審好壞球判決'};
 const decision=v=>v==='STRIKE'?'好球':v==='BALL'?'壞球':v==='CONFLICT'?'來源衝突':'非判決';
-const settings={...DEFAULT_OPTIONS,team:'all',showOthers:false,table:'mismatch',atBats:{}};
+const settings={...DEFAULT_OPTIONS,team:'all',showOthers:false,table:'errors',atBats:{}};
 let active=null,result=null,players={},metadata={},generation=0;
 let savedPlayers;
 const download=(name,body,type)=>{const url=URL.createObjectURL(new Blob([body],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);};
@@ -42,7 +42,7 @@ function render(){
   <p class="filter-note">上方統計為全場；下方球隊與打席選擇只影響卡片及明細。圓點大小僅示意，計算使用上方設定半徑。</p>
   <div class="batter-zone-grid">${selectedBatters().map(b=>batterCard(b)).join('')||'<div class="empty">本場沒有可列出的打者投球。</div>'}</div>
   <div class="umpire-inspector" id="umpire-inspector" role="status" tabindex="-1">點選球點或明細中的事件編號，可查看個人好球帶、判決與計算位置。</div>
-  <div class="panel-heading umpire-table-heading"><h3>判決明細</h3><select id="umpire-table-mode" aria-label="判決明細顯示"><option value="mismatch" ${settings.table==='mismatch'?'selected':''}>模型不符與邊界球</option><option value="all" ${settings.table==='all'?'selected':''}>所有好壞球判決</option><option value="excluded" ${settings.table==='excluded'?'selected':''}>無法評估的判決</option></select></div><div class="table-wrap umpire-decision-table">${decisionTable()}</div>`;
+  <div class="panel-heading umpire-table-heading"><h3>判決明細</h3><select id="umpire-table-mode" aria-label="判決明細顯示"><option value="errors" ${settings.table==='errors'?'selected':""}>疑似誤判（排除邊界）</option><option value="mismatch" ${settings.table==='mismatch'?'selected':''}>模型不符與邊界球</option><option value="all" ${settings.table==='all'?'selected':''}>所有好壞球判決</option><option value="excluded" ${settings.table==='excluded'?'selected':''}>無法評估的判決</option></select></div><p class="filter-note">疑似誤判只列出可評估、模型不符且非邊界的判決，並非正式 ABS 裁定。</p><div class="table-wrap umpire-decision-table">${decisionTable()}</div>`;
   for(const [id,key] of [['umpire-plane','plane'],['umpire-radius','radiusCm'],['umpire-tolerance','toleranceCm'],['umpire-team','team'],['umpire-table-mode','table']])document.getElementById(id).addEventListener('change',e=>{
     if(key==='radiusCm'||key==='toleranceCm'){if(!e.target.checkValidity()||e.target.value===''){e.target.reportValidity();return;}settings[key]=Number(e.target.value);}else settings[key]=e.target.value;render();
   });
@@ -80,7 +80,7 @@ function zonePlot(rows,zone){
 }
 function displayRows(){return selectedBatters().flatMap(b=>cardRows(b)).filter(r=>r.called).sort((a,b)=>a.index-b.index);}
 function decisionTable(){
-  const rows=displayRows().filter(r=>settings.table==='all'||(settings.table==='excluded'?!r.eligible:r.eligible&&(!r.matches||r.borderline)));
+  const rows=displayRows().filter(r=>settings.table==='all'||(settings.table==='errors'?r.eligible&&r.matches===false&&!r.borderline:settings.table==='excluded'?!r.eligible:r.eligible&&(!r.matches||r.borderline)));
   if(!rows.length)return '<div class="empty">目前條件沒有符合的判決。缺資料不會當成正確判決。</div>';
   return `<table><thead><tr><th>事件／局數</th><th>打者</th><th>投手</th><th>主審判決</th><th>模型判定</th><th>結果</th><th>距接觸邊界</th></tr></thead><tbody>${rows.map(r=>`<tr><td><button class="text-button" data-umpire-pitch="${r.index}">#${r.index} · ${r.inning}${r.half}</button></td><td>${esc(r.batter)}</td><td>${esc(r.pitcher)}</td><td>${decision(r.called)}</td><td>${r.eligible?decision(r.expected):'—'}</td><td>${r.eligible?(r.borderline?'邊界不確定':r.matches?'相符':'不符'):esc(reasons[r.reason]??r.reason)}</td><td>${r.eligible?fmt(r.marginCm,2)+' cm':'—'}</td></tr>`).join('')}</tbody></table>`;
 }
