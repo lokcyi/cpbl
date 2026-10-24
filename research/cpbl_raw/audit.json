@@ -1,0 +1,478 @@
+[
+  {
+    "game_id": "2026-A-211",
+    "top_keys": [
+      "Data"
+    ],
+    "data_keys": [
+      "Game"
+    ],
+    "game_keys": [
+      "GameId",
+      "SkipTrackman",
+      "GameStatus",
+      "Visiting",
+      "Home",
+      "Field",
+      "KindCode",
+      "GameSno",
+      "PreExeDate",
+      "Week",
+      "InningSeq",
+      "VisitingHomeType",
+      "LiveLog",
+      "WinningPitcher",
+      "LoserPitcher",
+      "Closer",
+      "MVP",
+      "Referee"
+    ],
+    "log_count": 353,
+    "located": 326,
+    "pitch_calls": {
+      "StrikeCalled": 62,
+      "InPlay": 67,
+      "FoulBallNotFieldable": 41,
+      "BallCalled": 137,
+      "StrikeSwinging": 19,
+      "None": 27
+    },
+    "interesting_paths": {
+      "$.Data.Game.LiveLog[].CatcherAcnt": {
+        "count": 353
+      },
+      "$.Data.Game.LiveLog[].CatcherName": {
+        "count": 353
+      },
+      "$.Data.Game.LiveLog[].CatcherUniformNo": {
+        "count": 353
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Release.RelHeight": {
+        "count": 326
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneTime": {
+        "count": 326
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneSpeed": {
+        "count": 326
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.PlateLocHeight": {
+        "count": 326
+      },
+      "$.Data.Game.Referee": {
+        "count": 1
+      },
+      "$.Data.Game.Referee[].Job": {
+        "count": 6
+      },
+      "$.Data.Game.Referee[].Name": {
+        "count": 6
+      }
+    },
+    "text_hits": [],
+    "sample": {
+      "Year": "2026",
+      "IsBall": "0",
+      "OutCnt": 0,
+      "BallCnt": 0,
+      "Content": "好球沒揮棒。",
+      "GameSno": 211,
+      "IsStrike": "1",
+      "KindCode": "A",
+      "PitchCnt": 1,
+      "FirstBase": "",
+      "HomeScore": 0,
+      "InningSeq": 1,
+      "StrikeCnt": 1,
+      "ThirdBase": "",
+      "ActionName": "飛球接殺",
+      "HitterAcnt": "0000000772",
+      "HitterName": "陳文杰",
+      "IsScoreCnt": "0",
+      "SecondBase": "",
+      "CatcherAcnt": "0000002285",
+      "CatcherName": "高宇杰",
+      "MainEventNo": "0110001000",
+      "PitcherAcnt": "0000006006",
+      "PitcherName": "德保拉",
+      "BattingOrder": 1,
+      "HitterLineup": 1,
+      "HitterImgPath": "https://www.cpbl.com.tw/files/atts/0L087781991358788030/3陳文杰2025.jpg",
+      "VisitingScore": 0,
+      "IsChangePlayer": "0",
+      "IsSpecialEvent": "0",
+      "HitterUniformNo": "3",
+      "CatcherUniformNo": "65",
+      "PitcherUniformNo": "46",
+      "VisitingHomeType": "1",
+      "BattingActionName": "中飛",
+      "DefendStationCode": "CF",
+      "HitterDefendStation": "8",
+      "PitcherImgPath": "https://www.cpbl.com.tw/files/atts/0L088842980599450491/46德保拉.jpg",
+      "Trackman": {
+        "Play": {
+          "PitchTag": {
+            "PitchCall": "StrikeCalled",
+            "AutoPitchType": "breakingball",
+            "TaggedPitchType": "fastball"
+          }
+        },
+        "Pitch": {
+          "Release": {
+            "RelSide": -0.581857104,
+            "RelSpeed": 139.92711777792,
+            "SpinRate": 2035.9193,
+            "Extension": 1.709047128,
+            "RelHeight": 1.947342816
+          },
+          "Location": {
+            "ZoneTime": 0.444116,
+            "ZoneSpeed": 126.20879593344,
+            "PlateLocSide": 0.114763296,
+            "PlateLocHeight": 0.6015654720000001
+          },
+          "Flight": {
+            "PolyFit": {
+              "PitchTrajectory": {
+                "X": [
+                  16.729764864,
+                  -38.65048404,
+                  4.407734136
+                ],
+                "Y": [
+                  1.946294304,
+                  -2.089690512,
+                  -2.109447648
+                ],
+                "Z": [
+                  0.580607424,
+                  -2.099815968,
+                  1.206252096
+                ]
+              }
+            }
+          }
+        },
+        "Hit": null
+      }
+    }
+  },
+  {
+    "game_id": "2026-D-166",
+    "top_keys": [
+      "Data"
+    ],
+    "data_keys": [
+      "Game"
+    ],
+    "game_keys": [
+      "GameId",
+      "SkipTrackman",
+      "GameStatus",
+      "Visiting",
+      "Home",
+      "Field",
+      "KindCode",
+      "GameSno",
+      "PreExeDate",
+      "Week",
+      "InningSeq",
+      "VisitingHomeType",
+      "LiveLog",
+      "WinningPitcher",
+      "LoserPitcher",
+      "Closer",
+      "MVP",
+      "Referee"
+    ],
+    "log_count": 277,
+    "located": 257,
+    "pitch_calls": {
+      "BallCalled": 93,
+      "InPlay": 52,
+      "StrikeCalled": 44,
+      "FoulBallNotFieldable": 39,
+      "None": 20,
+      "StrikeSwinging": 21,
+      "BallinDirt": 7,
+      "HitByPitch": 1
+    },
+    "interesting_paths": {
+      "$.Data.Game.LiveLog[].CatcherAcnt": {
+        "count": 277
+      },
+      "$.Data.Game.LiveLog[].CatcherName": {
+        "count": 277
+      },
+      "$.Data.Game.LiveLog[].CatcherUniformNo": {
+        "count": 277
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Release.RelHeight": {
+        "count": 257
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneTime": {
+        "count": 257
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneSpeed": {
+        "count": 257
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.PlateLocHeight": {
+        "count": 257
+      },
+      "$.Data.Game.Referee": {
+        "count": 1
+      },
+      "$.Data.Game.Referee[].Job": {
+        "count": 6
+      },
+      "$.Data.Game.Referee[].Name": {
+        "count": 6
+      }
+    },
+    "text_hits": [],
+    "sample": {
+      "Year": "2026",
+      "IsBall": "1",
+      "OutCnt": 0,
+      "BallCnt": 1,
+      "Content": "壞球。",
+      "GameSno": 166,
+      "IsStrike": "0",
+      "KindCode": "D",
+      "PitchCnt": 1,
+      "FirstBase": "",
+      "HomeScore": 0,
+      "InningSeq": 1,
+      "StrikeCnt": 0,
+      "ThirdBase": "",
+      "ActionName": "一壘安打 ",
+      "HitterAcnt": "0000006221",
+      "HitterName": "劉貴元",
+      "IsScoreCnt": "0",
+      "SecondBase": "",
+      "CatcherAcnt": "0000007306",
+      "CatcherName": "黃贊維",
+      "MainEventNo": "0110001000",
+      "PitcherAcnt": "0000003608",
+      "PitcherName": "曾仁和",
+      "BattingOrder": 1,
+      "HitterLineup": 1,
+      "HitterImgPath": "https://www.cpbl.com.tw/files/atts/0L088842855683097950/劉貴元2024.png",
+      "VisitingScore": 0,
+      "IsChangePlayer": "0",
+      "IsSpecialEvent": "0",
+      "HitterUniformNo": "85",
+      "CatcherUniformNo": "123",
+      "PitcherUniformNo": "55",
+      "VisitingHomeType": "1",
+      "BattingActionName": "一安",
+      "DefendStationCode": "CF",
+      "HitterDefendStation": "8",
+      "PitcherImgPath": "https://www.cpbl.com.tw/files/atts/0L280404317508900250/55曾仁和.jpg",
+      "Trackman": {
+        "Play": {
+          "PitchTag": {
+            "PitchCall": "BallCalled",
+            "AutoPitchType": "breakingball",
+            "TaggedPitchType": "fastball"
+          }
+        },
+        "Pitch": {
+          "Release": {
+            "RelSide": 0.626967504,
+            "RelSpeed": 139.63172268672,
+            "SpinRate": 2266.9573,
+            "Extension": 1.514621304,
+            "RelHeight": 1.775789184
+          },
+          "Location": {
+            "ZoneTime": 0.448213,
+            "ZoneSpeed": 127.14253732224,
+            "PlateLocSide": 0.355805232,
+            "PlateLocHeight": 0.3365723520000001
+          },
+          "Flight": {
+            "PolyFit": {
+              "PitchTrajectory": {
+                "X": [
+                  16.924879536,
+                  -38.627602704,
+                  4.092156408
+                ],
+                "Y": [
+                  1.775685552,
+                  -1.883856024,
+                  -2.960196264
+                ],
+                "Z": [
+                  -0.624772944,
+                  1.605646776,
+                  -2.250798648
+                ]
+              }
+            }
+          }
+        },
+        "Hit": null
+      }
+    }
+  },
+  {
+    "game_id": "2026-C-1",
+    "top_keys": [
+      "Data"
+    ],
+    "data_keys": [
+      "Game"
+    ],
+    "game_keys": [
+      "GameId",
+      "SkipTrackman",
+      "GameStatus",
+      "Visiting",
+      "Home",
+      "Field",
+      "KindCode",
+      "GameSno",
+      "PreExeDate",
+      "Week",
+      "InningSeq",
+      "VisitingHomeType",
+      "LiveLog",
+      "WinningPitcher",
+      "LoserPitcher",
+      "Closer",
+      "MVP",
+      "Referee"
+    ],
+    "log_count": 225,
+    "located": 218,
+    "pitch_calls": {
+      "BallCalled": 69,
+      "StrikeCalled": 46,
+      "FoulBallNotFieldable": 37,
+      "StrikeSwinging": 18,
+      "None": 7,
+      "InPlay": 48
+    },
+    "interesting_paths": {
+      "$.Data.Game.LiveLog[].CatcherAcnt": {
+        "count": 225
+      },
+      "$.Data.Game.LiveLog[].CatcherName": {
+        "count": 225
+      },
+      "$.Data.Game.LiveLog[].CatcherUniformNo": {
+        "count": 225
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Release.RelHeight": {
+        "count": 218
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneTime": {
+        "count": 218
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.ZoneSpeed": {
+        "count": 218
+      },
+      "$.Data.Game.LiveLog[].Trackman.Pitch.Location.PlateLocHeight": {
+        "count": 218
+      },
+      "$.Data.Game.Referee": {
+        "count": 1
+      },
+      "$.Data.Game.Referee[].Job": {
+        "count": 6
+      },
+      "$.Data.Game.Referee[].Name": {
+        "count": 6
+      }
+    },
+    "text_hits": [],
+    "sample": {
+      "Year": "2026",
+      "IsBall": "1",
+      "OutCnt": 0,
+      "BallCnt": 1,
+      "Content": "壞球。",
+      "GameSno": 1,
+      "IsStrike": "0",
+      "KindCode": "C",
+      "PitchCnt": 1,
+      "FirstBase": "",
+      "HomeScore": 0,
+      "InningSeq": 1,
+      "StrikeCnt": 0,
+      "ThirdBase": "",
+      "ActionName": "三振/遭捕手傳一壘刺殺",
+      "HitterAcnt": "0000007085",
+      "HitterName": "張士綸",
+      "IsScoreCnt": "0",
+      "SecondBase": "",
+      "CatcherAcnt": "0000006217",
+      "CatcherName": "林辰勳",
+      "MainEventNo": "0110001000",
+      "PitcherAcnt": "0000007779",
+      "PitcherName": "蔣銲",
+      "BattingOrder": 1,
+      "HitterLineup": 1,
+      "HitterImgPath": "https://www.cpbl.com.tw/files/atts/0O058614905470539415/4張士綸2025.png",
+      "VisitingScore": 0,
+      "IsChangePlayer": "0",
+      "IsSpecialEvent": "0",
+      "HitterUniformNo": "4",
+      "CatcherUniformNo": "9",
+      "PitcherUniformNo": "33",
+      "VisitingHomeType": "1",
+      "BattingActionName": "三振",
+      "DefendStationCode": "2B",
+      "HitterDefendStation": "4",
+      "PitcherImgPath": "https://www.cpbl.com.tw/files/atts/0Q075585498425854837/蔣銲2026.jpg",
+      "Trackman": {
+        "Play": {
+          "PitchTag": {
+            "PitchCall": "BallCalled",
+            "AutoPitchType": "breakingball",
+            "TaggedPitchType": "fastball"
+          }
+        },
+        "Pitch": {
+          "Release": {
+            "RelSide": 0.642158736,
+            "RelSpeed": 148.65013240704,
+            "SpinRate": 2689.8472,
+            "Extension": 1.606835496,
+            "RelHeight": 1.899342912
+          },
+          "Location": {
+            "ZoneTime": 0.4229,
+            "ZoneSpeed": 132.09788452608,
+            "PlateLocSide": 0.34666428,
+            "PlateLocHeight": 0.878467128
+          },
+          "Flight": {
+            "PolyFit": {
+              "PitchTrajectory": {
+                "X": [
+                  16.830967608,
+                  -41.090584824,
+                  5.4743604
+                ],
+                "Y": [
+                  1.898093232,
+                  -1.51947372,
+                  -2.106603864
+                ],
+                "Z": [
+                  -0.6390954959999999,
+                  1.741712544,
+                  -2.487332592
+                ]
+              }
+            }
+          }
+        },
+        "Hit": null
+      }
+    }
+  }
+]
