@@ -1,0 +1,38 @@
+name: Collect finished games
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '比賽日期 YYYY-MM-DD（台北日期）'
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: cpbl-data-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download and analyze
+        env:
+          GAME_DATE: ${{ inputs.date }}
+        run: node scripts/refresh.mjs "$GAME_DATE"
+      - name: Save collected data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update collected CPBL game data'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,14 @@
+{
+  "name": "cpbl-game-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "test": "node --test tests/analysis.test.js tests/api.test.js",
+    "refresh": "node scripts/refresh.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

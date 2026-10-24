@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d35">
+  <meta name="description" content="中職單場比賽分析中心：選擇場次，檢視投打表現、投球位置與逐球資料，下載官方原始資料。">
+  <title>鑽石數據室 · CPBL 比賽分析</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23123d35'/%3E%3Cpath d='M20 7L33 20 20 33 7 20Z' fill='none' stroke='%23d8edb8' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="鑽石數據室首頁"><span class="brand-icon">◇</span><span>鑽石數據室<small>DIAMOND DATA LAB</small></span></a>
+    <div class="season-label">CPBL / 比賽研究</div>
+    <nav aria-label="主要導覽">
+      <a class="nav-active" href="#main"><span>▦</span> 比賽總覽 <span class="nav-dot"></span></a>
+      <a href="#pitch-section"><span>◎</span> 投球探索</a>
+      <a href="#players-section"><span>♧</span> 球員表現</a>
+      <a href="#events-section"><span>≡</span> 逐球紀錄</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="diamond-small">◇</div><p>每一球，都有故事。</p><small>從一場比賽，看見更多細節。</small><a href="https://github.com/lokcyi/cpbl" target="_blank" rel="noopener">GitHub 專案 ↗</a><span>非官方資料分析 · v0.1</span></div>
+  </aside>
+  <main id="main">
+    <header class="page-header"><div><div class="eyebrow">THE GAME, IN PERSPECTIVE</div><h1>看懂比賽的每一面<span>。</span></h1><p>從比分到每一顆投球，你的中職比賽分析工作台。</p></div><div class="header-tag"><i></i> 官方資料・獨立分析</div></header>
+    <section class="selector-panel" aria-labelledby="select-title">
+      <div class="section-top"><h2 id="select-title"><span class="step">01</span> 選一場比賽</h2><span class="muted small">選日期，或從已驗證場次開始</span></div>
+      <form id="schedule-form"><label>比賽日期<input type="date" id="date" required min="2026-01-01" max="2099-12-31"></label><label>賽事類別<select id="kind"><option value="all">全部賽事</option value="A">一軍例行賽</option><option value="D">二軍例行賽</option><option value="C">台灣大賽</option><option value="E">季後挑戰賽</option></select></label><button class="primary" id="search-button" type="submit">查詢場次 <span>↗</span></button><button class="text-button" type="button" id="samples-button">查看已驗證場次</button></form>
+      <div id="schedule-status" class="status-line" role="status" aria-live="polite"></div>
+      <div id="games" class="game-grid" aria-label="可選比賽"></div>
+    </section>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <div id="dashboard" hidden></div>
+    <footer class="page-footer"><span>◇ 鑽石數據室</span><p>資料來源：<a href="https://stats.cpbl.com.tw/" target="_blank" rel="noopener">中華職棒進階數據網站 ↗</a>。非官方分析，球點分布不代表正式 ABS 判定。</p><button id="method-button" class="text-button">分析方法與資料說明</button></footer>
+  </main>
+  <dialog id="method-dialog"><div class="dialog-top"><h2>資料與分析方法</h2><button id="close-dialog" aria-label="關閉說明">✕</button></div><div class="method-copy"><p>比分、安打、失誤與球員打擊／投手成績取自官方單場成績。球點、球速、轉速與球種取自逐球 Trackman 紀錄。</p><p>投球辨識保留具有 Trackman 判決的特殊事件（例如同球發生盜壘），排除換人，並補入標記為一般投球的未追蹤事件。重建投球數會與官方投手用球數核對，有差異時顯示提示。</p><p>好球／壞球圖只包含明確的 StrikeCalled、BallCalled；落地壞球等類型另列。球種使用自動標籤，原始人工標籤保留於 CSV。揮空率＝揮空／可分類的揮棒事件（揮空＋界外＋擊球進場）。</p><p>球數顯示官方紀錄的「事件後球數」。逐局得分使用官方逐局表；記錄為 0 不推定該半局實際進行。</p><p>球點以原始橫向／高度數值顯示，不反轉座標，也不繪製假定的標準好球帶。座標方向與個人好球帶仍需驗證，因此不計算裁判準確率、誤判或 ABS 推翻率。</p><p>已驗證樣本保存於 2026-10-24。即時取得時間與頁面分析版本會隨比賽顯示。缺少資料使用「—」，不是 0。分析在瀏覽器執行，下載資料留在你的裝置。</p></div></dialog>
+</body>
+</html>
